@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <script src="js/libs/w3data.js"></script>
+    <title>Limousine</title>
+</head>
+<body>
+<header>
+    <div w3-include-html="views/header.html"></div>
+</header>
+<div class="content-wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="header-short">
+                    <h2 class="header-short__text">Reservation</h2>
+                    <div class="header-short__line"></div>
+                    <div class="header-short__line"></div>
+                    <!--<a href="reservation.html" class="btn-yellow header-short__btn">Reservation</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrap bg-light">
+    <div class="content-wrap content-wrap--top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="contacts-info contacts-info--mar0">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="row">
+                            <div class="col-xs-1 col-xs-offset-1">
+                                <div class="contacts-info__item"><img src="images/icons/con_phone_icon.png"></div>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="contacts-info__item"><a href="tel:3038876962">303-887-6962</a>
+                                    <br></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="row">
+                            <div class="col-xs-1 col-xs-offset-1">
+                                <div class="contacts-info__item"></div>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="contacts-info__item">
+                                    <a href="#">Contact Us</a>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="row">
+                            <div class="col-xs-1 col-xs-offset-1">
+                                <div class="contacts-info__item"><img src="images/icons/con_mail_icon.png"></div>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="contacts-info__item"><a href="info@seattleelitetown.com">info@ajlimousine.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <form method="post" id="contact-form" role="form">
+                        <h1 class="contact-form__top">Complete your reservation now.</h1>
+                        <h2 class="reservation-title"><span>Passenger information</span></h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="full-name" class="sr-only"></label>
+                                    <input id="full-name" type="text" class="form-control" placeholder="Full name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="address" class="sr-only"></label>
+                                    <input id="address" type="text" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mail" class="sr-only"></label>
+                                    <input id="mail" type="text" class="form-control" placeholder="E-mail">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="company" class="sr-only"></label>
+                                    <input id="company" type="text" class="form-control" placeholder="Company">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label for="city" class="sr-only"></label>
+                                            <input id="city" type="text" class="form-control" placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label for="state" class="sr-only"></label>
+                                            <select id="state" type="text" class="form-control" placeholder="">
+                                                <option>State1</option>
+                                                <option>State2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="zip" class="sr-only"></label>
+                                            <input id="zip" type="text" class="form-control" placeholder="Zip/Postal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label for="mobile" class="sr-only"></label>
+                                            <input id="mobile" type="text" class="form-control" placeholder="Mobile Phone">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-7">
+                                        <div class="form-group">
+                                            <label for="day-phone" class="sr-only"></label>
+                                            <input id="day-phone" type="text" class="form-control" placeholder="Daytime Phone">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <h2 class="reservation-title"><span>Ride details</span></h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="vehicle" class="sr-only"></label>
+                                    <select id="vehicle" type="text" class="form-control" placeholder="Vehicle Type">
+                                        <option>Vehicle Type</option>
+                                        <option>Vehicle Type</option>
+                                        <option>Vehicle Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service" class="sr-only"></label>
+                                    <select id="service" type="text" class="form-control" placeholder="Service type">
+                                        <option>Service Type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <div class="pickup"><span class="pickup__text"> Pickup :</span>
+                                        <div class="agreed">
+                                            <div class="agreed__checkbox"><span class=""></span></div>
+                                            <div class="agreed__text">Use the address information listed above</div>
+                                        </div>
+                                    </div>
+                                    <div class="label-wrap label-wrap--left">
+                                        <label class="btn active custom-radio-btn">
+                                            <input type="radio" data-show="#pickup_street" data-hide="#pickup_airport" name='pickup' checked><i class="fa fa-circle-o"></i><i
+                                                class="fa fa-dot-circle-o"></i><span>Street address</span>
+                                        </label>
+                                        <label class="btn custom-radio-btn">
+                                            <input type="radio" data-show="#pickup_airport" data-hide="#pickup_street"  name='pickup'><i class="fa fa-circle-o "></i><i
+                                                class="fa fa-dot-circle-o"></i><span>Airport</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div id="pickup_street">
+                                    <div class="form-group">
+                                        <label for="address2" class="sr-only"></label>
+                                        <input id="address2" type="text" class="form-control" placeholder="Address">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <div class="form-group">
+                                                <label for="city2" class="sr-only"></label>
+                                                <input id="city2" type="text" class="form-control" placeholder="City">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="state2" class="sr-only"></label>
+                                                <select id="state2" type="text" class="form-control" placeholder="">
+                                                    <option>State1</option>
+                                                    <option>State2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <label for="zip2" class="sr-only"></label>
+                                                <input id="zip2" type="text" class="form-control" placeholder="Zip/Postal">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="sr-only"></label>
+                                        <input id="phone" type="text" class="form-control" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div id="pickup_airport">
+                                    <div class="form-group">
+                                        <label for="airport" class="sr-only"></label>
+                                        <input id="airport" type="text" class="form-control" placeholder="Airport name or code">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-7">
+                                            <div class="form-group">
+                                                <label for="airline" class="sr-only"></label>
+                                                <input id="airline" type="text" class="form-control" placeholder="Airline name">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="form-group">
+                                                <label for="flight" class="sr-only"></label>
+                                                <input id="flight" type="text" class="form-control" placeholder="Flight #">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="greet" class="sr-only"></label>
+                                        <input id="greet" type="text" class="form-control" placeholder="Greeting and Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <img class="date-icon" src="./images/icons/calendar.png">
+                                            <label for="date" class="sr-only"></label>
+                                            <input id="date" type="text" class="form-control" placeholder="Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <img class="date-icon" src="./images/icons/calendar-time.png">
+                                            <label for="time" class="sr-only"></label>
+                                            <input id="time" type="text" class="form-control" placeholder="Time">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="#pass" class="sr-only"></label>
+                                            <input id="#pass" type="text" class="form-control" placeholder="# of Pass">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="#bag" class="sr-only"></label>
+                                            <input id="#bag" type="text" class="form-control" placeholder="# of Bags">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="pickup"><span class="pickup__text"> Destination: </span>
+                                    </div>
+                                    <div class="label-wrap label-wrap--left">
+                                        <label class="btn active custom-radio-btn">
+                                            <input id="pickup_radio"  data-show="#destination_street" data-hide="#destination_airport"  type="radio" name='destination' checked><i
+                                                class="fa fa-circle-o"></i><i
+                                                class="fa fa-dot-circle-o"></i><span>Street address</span>
+                                        </label>
+                                        <label class="btn custom-radio-btn">
+                                            <input id="dest_radio" data-show="#destination_airport" data-hide="#destination_street"  type="radio" name='destination'><i class="fa fa-circle-o "></i><i
+                                                class="fa fa-dot-circle-o"></i><span>Airport</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div id="destination_street">
+                                    <div class="form-group">
+                                        <label for="address4" class="sr-only"></label>
+                                        <input id="address4" type="text" class="form-control" placeholder="Address">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <div class="form-group">
+                                                <label for="city2" class="sr-only"></label>
+                                                <input id="city2" type="text" class="form-control" placeholder="City">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="state4" class="sr-only"></label>
+                                                <select id="state4" type="text" class="form-control" placeholder="">
+                                                    <option>State1</option>
+                                                    <option>State2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <label for="zip4" class="sr-only"></label>
+                                                <input id="zip4" type="text" class="form-control" placeholder="Zip/Postal">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="sr-only"></label>
+                                        <input id="phone" type="text" class="form-control" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div id="destination_airport">
+                                    <div class="form-group">
+                                        <label for="airport" class="sr-only"></label>
+                                        <input id="airport" type="text" class="form-control" placeholder="Airport name or code">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-7">
+                                            <div class="form-group">
+                                                <label for="airline" class="sr-only"></label>
+                                                <input id="airline" type="text" class="form-control" placeholder="Airline name">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="form-group">
+                                                <label for="flight" class="sr-only"></label>
+                                                <input id="flight" type="text" class="form-control" placeholder="Flight #">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="reservation-title"><span>Payment Details</span></h2>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="label-wrap form-group">
+                                    <label class="btn active custom-radio-btn">
+                                        <input type="radio" name='payment' checked><i class="fa fa-circle-o"></i><i
+                                            class="fa fa-dot-circle-o"></i><span>Credit Card</span>
+                                    </label>
+                                    <label class="btn custom-radio-btn">
+                                        <input type="radio" name='payment'><i class="fa fa-circle-o "></i><i
+                                            class="fa fa-dot-circle-o"></i><span>Direct Billing</span>
+                                    </label>
+                                    <label class="btn custom-radio-btn">
+                                        <input type="radio" name='payment'><i class="fa fa-circle-o "></i><i
+                                            class="fa fa-dot-circle-o"></i><span>Cash/Check(WA State Only)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="ccname" class="sr-only"></label>
+                                    <input id="ccname" type="text" class="form-control" placeholder="Name as appear on credit card">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="cc" class="sr-only"></label>
+                                    <input id="cc" type="text" class="form-control" placeholder="Credit Card">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <label for="exp-date" class="sr-only"></label>
+                                        <input id="exp-date" type="text" class="form-control" placeholder="Exp. date">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <label for="cvv" class="sr-only"></label>
+                                        <input id="cvv" class="form-control" type="text" placeholder="CVV">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <img src="./images/icons/contacts_cvv.png" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group agreed " id="billing-same">
+                            <div class="agreed__checkbox"><span class="agreed__checked"></span></div>
+                            <div class="agreed__text">Billing same as in passanger's info</div>
+                        </div>
+                        <div class="row hidden">
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+                                    <label for="address3" class="sr-only"></label>
+                                    <input id="address3" type="text" class="form-control" placeholder="Address">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label for="city3" class="sr-only"></label>
+                                            <input id="city3" type="text" class="form-control" placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label for="state3" class="sr-only"></label>
+                                            <select id="state3" type="text" class="form-control" placeholder="">
+                                                <option>State</option>
+                                                <option>State</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="zip3" class="sr-only"></label>
+                                            <input id="zip3" type="text" class="form-control" placeholder="Zip/Postal">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <h2 class="reservation-title"><span>Additional information</span></h2>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="add-info">
+                                    Please list all additional stops, description of required services and any other accommodations that you
+                                    may need.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="add-agree">
+                                    By submiting this form you agreed that : (1) you are the credit card holder and (2) that you are
+                                    requesting the services listed above and (3) that you are authorizing this card to be used for the
+                                    requested services.<br>
+
+                                    <div class="agreed">
+                                        <label for="submit_agree" class="agreed__checkbox"><span class=""></span></label>
+                                        <div class="agreed__text">I agree</div>
+                                        <input id="submit_agree" type="checkbox" class="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="submit" class="col-xs-offset-4 col-xs-4 top-margin">
+                            <div class="form-group">
+                                <button type="submit" value="" class="btn-yellow contact-form__btn">submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div w3-include-html="views/footer.html"></div>
+</footer>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery.viewportchecker.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/w3data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/slider.js"></script>
+<script>
+    w3IncludeHTML();
+</script>
+<!-- build:js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
+<script>
+    $(function () {
+        initActive('reservation.html');
+
+    });
+</script>
+</body>

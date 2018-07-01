@@ -1,0 +1,202 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  @include respond-to($sm-bt) {
+    height: 50%;
+  }
+  @include respond-to($xs-bt) {
+    height: 40%;
+  }
+  &__wrap {
+    color: $nav-bg;
+    font-family: 'Proxima Nova Rg', sans-serif;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__top {
+    text-transform: uppercase;
+    font-size: 38px;
+    letter-spacing: 25px;
+    @include respond-to($desktop) {
+      font-size: 38px*0.8;
+      letter-spacing: 25px*0.8;
+    }
+    @include respond-to($tablet) {
+      font-size: 38px*0.6;
+      letter-spacing: 25px*0.6;
+    }
+    @include respond-to($phone) {
+      font-size: 38px*0.4;
+      letter-spacing: 25px*0.4;
+    }
+    @include respond-to($phonePortrait) {
+      font-size: 38px*0.3;
+      line-height: 25px*0.3;
+    }
+
+  }
+  &__title {
+    font-family: 'Proxima Nova ExBd', sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 79px;
+    margin: 10px;
+    text-align: center;
+    @include respond-to($desktop) {
+      font-size: 60px*0.8;
+      line-height: 79px*0.8;
+    }
+    @include respond-to($tablet) {
+      font-size: 60px*0.6;
+      line-height: 79px*0.6;
+    }
+    @include respond-to($phoneLandscape) {
+      font-size: 60px*0.4;
+      line-height: 79px*0.4;
+    }
+    @include respond-to($phonePortrait) {
+      font-size: 60px*0.3;
+      line-height: 79px*0.3;
+    }
+
+  }
+  &__text {
+    width: 80%;
+    font-size: 24px;
+    color: #f5f8fb;
+    margin: 15px auto;
+    text-align: center;
+    line-height: normal;
+    @include respond-to($desktop) {
+      font-size: 24px*0.9;
+    }
+    @include respond-to($tablet) {
+      font-size: 24px*0.8;
+      width: 60%;
+    }
+    @include respond-to($phoneLandscape) {
+      font-size: 24px*0.7;
+      width: 70%;
+    }
+    @include respond-to($phonePortrait) {
+      font-size: 24px*0.7;
+      width: 80%;
+    }
+
+  }
+  .btn-yellow-border {
+    margin-top: 40px;
+  }
+
+}
+
+.home-header {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto 30px;
+  color: $nav-bg;
+  text-transform: uppercase;
+  text-align: center;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-family: 'Proxima Nova SmBd', sans-serif;
+    font-size: 28px;
+    margin: 0;
+    letter-spacing: 0.07em;
+    @include respond-to($tablet) {
+      font-size: 28px*0.9;
+    }
+    @include respond-to($phone) {
+      font-size: 28px*0.75;
+    }
+    a {
+      color: $nav-bg;
+      text-decoration: none;
+    }
+  }
+  &__text {
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    @include respond-to($tablet) {
+      font-size: 16px*0.9;
+    }
+    @include respond-to($phone) {
+      font-size: 16px*0.8;
+    }
+  }
+}
+
+.header-short {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  //@include responsive-val(padding-top, 40px);
+  //@include responsive-val(padding-bottom, 30px);
+
+  &__text {
+    font-family: "Proxima Nova SmBd", sans-serif;
+    text-align: center;
+    color: #f5f8fb;
+    @include responsive-val(font-size, 28px);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  &__line {
+    position: relative;
+    margin: 0 auto 5px;
+    width: 85px;
+    border-bottom: 1px solid #f5f8fb;
+    @include respond-to($xs-bt) {
+
+    }
+  }
+  &__btn {
+    position: absolute !important;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include respond-to($xs-bt) {
+      position: relative !important;
+      transform: none;
+      margin: 10px auto;
+    }
+  }
+}
+
+.scroll-down {
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  color: #fff;
+  position: absolute;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //width: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  padding: 4%;
+  &:hover {
+    color: #fff;
+  }
+  @include respond-to('(max-height: 799px)') {
+    display: none;
+  }
+  @include respond-to($sm-bt) {
+    display: none;
+  }
+}

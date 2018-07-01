@@ -1,0 +1,56 @@
+@mixin font-face-to($name, $path, $type) {
+  @font-face {
+    font-family: $name;
+    src: url($path) format($type);
+  }
+}
+
+@mixin respond-to($media) {
+  @media #{$media} {
+    @content
+  }
+}
+
+@mixin skew($side: right, $deg: -20deg, $right: -15px, $left: -15px, $width: 80px, $bg: #fff) {
+  position: relative;
+
+  &:before {
+    z-index: 10;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    @if $side == right {
+      right: $right;
+    } @else if $side == left {
+      left: $left;
+    }
+
+    display: block;
+    width: $width;
+    background: $bg;
+    -webkit-transform: skew(-$deg);
+    -ms-transform: skew(-$deg);
+    transform: skew(-$deg);
+  }
+}
+
+@mixin responsive-val($prop, $val) {
+  #{$prop} : $val;
+  @include respond-to($sm-bt) {
+    #{$prop} : $val*0.8;
+  }
+  @include respond-to($xs-bt) {
+    #{$prop}: $val*0.7;
+  }
+}
+@mixin responsive-val-lg($prop, $val) {
+  #{$prop} : $val;
+  @include respond-to($sm-bt) {
+    #{$prop} : $val*0.7;
+  }
+  @include respond-to($xs-bt) {
+    #{$prop}: $val*0.5;
+  }
+}

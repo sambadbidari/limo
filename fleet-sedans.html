@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <script src="js/libs/w3data.js"></script>
+    <title>Limousine</title>
+</head>
+<body>
+<header>
+    <div w3-include-html="views/header.html"></div>
+</header>
+<section id="" class="">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-short">
+                <h2 class="header-short__text">OUR Fleet</h2>
+                <div class="header-short__line"></div>
+                <!--<a href="reservation.html" class="btn-yellow header-short__btn">Reservation</a>-->
+            </div>
+        </div>
+    </div>
+    <div class="wrap bg-light">
+        <div class="content-wrap  content-wrap--top">
+            <div class="container-fluid" id="sedans">
+                <div class="row">
+                    <h2 class="fleet__top">luxury sedans</h2>
+                    <p class="fleet__desc">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+                        nec tellus a odio
+                        tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
+                </div>
+                <div class="row">
+                    <div class="fleet-item" w3-repeat="s in sedans">
+                        <figure class='fleet-item__figure'>
+                            <img class="fleet-item__img" src="{{s.img}}"
+                                 alt="">
+                            <img class="fleet-item__imgin" src="{{s.img_inner}}" alt="">
+                        </figure>
+                        <!--<h3 class="fleet-name">{{s.car}}</h3>-->
+                        <div class="fleet-item__body">
+                            <h2 class="fleet-item__title">{{s.car}}</h2>
+                            <div class="fleet-item__desc">
+                                <img class="fleet-item__icon" src="./images/icons/upto.png">
+                                <div class="fleet-item__desc-val">{{s.upto}}</div>
+                                <img class="fleet-item__icon" src="./images/icons/case.png">
+                                <div class="fleet-item__desc-val">{{s.case}}</div>
+                                <!--</div>-->
+                                <a href="reservation.html" class="btn btn-yellow btn-yellow--inv fleet-item__btn">Reserve now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!--<div class="wrap">-->
+    <!--<div class="view-list">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-6 col-sm-3 ">-->
+                    <!--<div class="view-list__container">-->
+                        <!--<a class="view-list__link" href="">-->
+                            <!--<div class="view-list__icon">-->
+                                <!--<img class="view-list__img" src="./images/icons/info-01.png" alt="info">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; /.icon &ndash;&gt;-->
+                            <!--<span class="view-list__desc">Our Vehicles</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+
+                    <!--&lt;!&ndash; /.desc &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                <!--<div class="col-xs-6 col-sm-3">-->
+                    <!--<div class="view-list__container">-->
+                        <!--<a class="view-list__link" href="">-->
+                            <!--<div class="view-list__icon">-->
+                                <!--<img class="view-list__img" src="./images/icons/info-02.png" alt="info">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; /.icon &ndash;&gt;-->
+                            <!--<span class="view-list__desc">Our Services</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.desc &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                <!--<div class="col-xs-6 col-sm-3">-->
+                    <!--<div class="view-list__container">-->
+                        <!--<a class="view-list__link" href="">-->
+                            <!--<div class="view-list__icon">-->
+                                <!--<img class="view-list__img" src="./images/icons/info-03.png" alt="info">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; /.icon &ndash;&gt;-->
+                            <!--<span class="view-list__desc">Our Rates</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.desc &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                <!--<div class="col-xs-6 col-sm-3">-->
+                    <!--<div class="view-list__container">-->
+                        <!--<a class="view-list__link" href="">-->
+                            <!--<div class="view-list__icon">-->
+                                <!--<img class="view-list__img" src="./images/icons/info-04.png" alt="info">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; /.icon &ndash;&gt;-->
+                            <!--<span class="view-list__desc">Fast Reservation</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.desc &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.row &ndash;&gt;-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<footer id="footer">
+    <div w3-include-html="views/footer.html"></div>
+</footer>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery.viewportchecker.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/w3data.js"></script>
+<script src="js/content.js"></script>
+<script>
+    w3IncludeHTML();
+    w3DisplayData("sedans", _content);
+</script>
+<!-- build:js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
+<script>
+    $(function () {
+        initActive('fleet.html');
+
+    });
+</script>
+</body>

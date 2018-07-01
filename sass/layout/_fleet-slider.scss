@@ -1,0 +1,144 @@
+.fleet-nav-tabs {
+  background-color: rgba(255, 255, 255, 0.9);
+  &__link {
+    padding: 20px 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    font-family: "Proxima Nova Con SmBd", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #71788f;
+    margin-bottom: 0 !important;
+    &:hover, &:focus {
+      background-color: #2b3146 !important;
+      color: #fff;
+    }
+    @include respond-to($sm-bt) {
+      padding: 15px 0 !important;
+    }
+    @include respond-to($xs-bt) {
+      font-size: 16px*0.9;
+      padding: 7px 0 !important;
+    }
+
+  }
+  .active &__link {
+    background-color: #2b3146 !important;
+    color: #fff !important;
+  }
+}
+
+.fleet-tab-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  &__wrap {
+    position: relative;
+  }
+  &__item {
+    position: relative;
+    outline: 0;
+  }
+  &__img {
+   height: 250px;
+    margin: 15px auto;
+    outline: 0;
+
+    @include respond-to($tablet) {
+      min-height: 240px;
+    }
+    @include respond-to($phone) {
+      height: auto;
+      min-height: 150px;
+    }
+  }
+  &__desc {
+    color: $dark-bg;
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    @include respond-to($tablet) {
+      font-size: 18px
+    }
+  ;
+    @include respond-to($phone) {
+      font-size: 16px
+    }
+  ;
+  }
+  &__footer {
+    position: relative;
+    border-top: 1px solid #7d7d7d;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+
+  }
+}
+
+.next, .prev {
+  color: #fff;
+  @extend %arrows;
+  width: 100px;
+  @include respond-to($phone) {
+    display: none;
+  }
+  @include respond-to($tablet) {
+    display: none;
+  }
+}
+
+.arrow-buttons {
+
+  .next {
+    color: #7d7d7d;
+    position: absolute;
+    width: 100px;
+    height: 70%;
+    top: 0;
+    right: 10px;
+  }
+  .prev {
+    color: #7d7d7d;
+    width: 100px;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  @include respond-to('(max-width: 787px)') {
+    display: flex;
+    justify-content: center;
+    .next {
+      position: relative;
+      height: inherit;
+      top: 0;
+      right: 0;
+    }
+    .prev {
+      position: relative;
+      height: inherit;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  //background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  &__load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @extend %flex-center;
+  }
+}

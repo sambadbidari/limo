@@ -1,0 +1,203 @@
+$nav-height: 60px;
+$nav-height-xs: 45px;
+$phones-color: #0b0f1d;
+$navbar-background: rgba(241, 241, 241, 0.95);
+
+.my-navbar {
+  background-color: $navbar-background;
+  border: 0;
+  border-bottom: 5px solid #0b0f1d;
+  margin-bottom: 0;
+  border-radius: 0;
+  @include respond-to($xs-bt) {
+    height: inherit;
+  }
+  &__header {
+    border: 0 !important;
+    @include respond-to($sm-bt) {
+      //position: relative;
+      //float: none;
+    }
+  }
+}
+
+.menu {
+  margin-top: 5px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  @extend %flex-center;
+  @include respond-to($sm-bt) {
+    //border-top: 1px solid $yellow;
+    //margin: 0 !important;
+    //position: relative;
+  }
+  @include respond-to($xs-bt) {
+    position: relative;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  &__item {
+    @include respond-to($xs-bt) {
+      width: 100%;
+    }
+
+  }
+  &__link {
+    font-family: "Oswald Lt", sans-serif;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: $body-bg !important;
+    background-color: transparent;
+    transition: all 1s;
+    @include respond-to($sm-bt) {
+      padding: 8px 8px !important;
+    }
+    &:hover, &:focus {
+      background-color: $yellow !important;
+    }
+  }
+  .active > &__link {
+    background-color: $yellow !important;
+  }
+}
+
+.brand {
+  position: relative;
+  height: $nav-height;
+  padding: 0;
+  z-index: 5;
+  @extend %flex-center;
+  @include respond-to($sm-bt) {
+    height: $nav-height-xs;
+  }
+  &__img {
+    max-height: 90%;
+    @include respond-to($sm-bt){
+      max-height: 75%;
+    }
+  }
+}
+
+.my-collapse {
+  max-height: none!important;
+  padding: 0;
+  position: relative;
+}
+
+.my-toggle {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 0;
+  margin-right: 0;
+  &:hover, &:focus {
+    background-color: transparent !important;
+    border: 2px solid $yellow;
+  }
+}
+
+.my-dropdown {
+  position: absolute;
+  border-radius: 0!important;
+  border: 0!important;
+  z-index: 1000;
+  padding: 0;
+  display: block;
+  background-color: $nav-bg;
+  //left: -50% !important;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+  transform: scaleX(0);
+  transition: all 0.3s;
+  @include respond-to($xs-bt){
+    transform: scaleX(1);
+    background-color: #E7E7E7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .175);
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  &__item{
+    font-family: "Oswald Lt", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: $body-bg !important;
+    padding: 5px 20px;
+    margin: 0 5px;
+    &:hover{
+      //color: #fff!important;
+      //text-decoration: underline!important;
+      background-color: rgba(217,193,24, 0.7)!important;
+    }
+    @include respond-to($xs-bt){
+      text-align: center;
+    }
+  }
+  .dropdown-menu & {
+    z-index: 1000;
+
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+  }
+  .dropdown:hover & {
+    z-index: 1000;
+
+    transform: scaleX(1);
+  }
+
+}
+
+.phones {
+  position: relative;
+  z-index: 5;
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-left: 0;
+  @include respond-to($xs-bt) {
+    position: absolute;
+    width: 101px;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  @include respond-to($phonePortrait) {
+    left: auto;
+    right: 20%;
+  }
+  &__item {
+    list-style: none;
+    text-align: right;
+    @include respond-to($xs-bt) {
+      text-align: left;
+    }
+  }
+  .fa {
+    color: $grey;
+    padding: 3px;
+
+  }
+  &__desc {
+    font-family: "Proxima Nova Con Th", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $phones-color;
+    @include respond-to($md-bt) {
+      display: none;
+    }
+  }
+  &__link {
+    font-family: "Proxima Nova Con SmBd", sans-serif;
+    @include responsive-val(font-size, 18px);
+    //font-size: 18px;
+    text-transform: uppercase;
+    color: $phones-color;
+  }
+
+}

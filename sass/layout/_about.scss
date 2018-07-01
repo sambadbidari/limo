@@ -1,0 +1,48 @@
+.about{
+  position: relative;
+  height: calc(100vh - 65px);
+  padding-top: 1px;
+  @include respond-to($sm-bt){
+    height: auto;
+  }
+}
+.about-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: rgba(7, 11, 32, 0.8);
+  a.btn-yellow-border {
+    margin: 15px auto;
+    display: table;
+    font-size: 18px;
+  }
+}
+
+
+.about-content {
+  margin:10px 15px;
+  font-family: "Proxima Nova Con Th", sans-serif;
+  font-size: 17px;
+  line-height: 1.2em!important;
+  color: $nav-bg;
+  text-align: center;
+  @include respond-to($xs-bt){
+    font-size: 15px;
+  }
+}
+
+.heading-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  hr {
+    width: 100px;
+    margin-top: 0;
+    margin-bottom: 2px;
+    border-top: 1px solid $nav-bg;
+    @include respond-to('(max-width: 667px)') {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <script src="js/libs/w3data.js"></script>
+    <title>Limousine</title>
+<body>
+
+<header>
+    <div w3-include-html="views/header.html"></div>
+</header>
+<section class="">
+    <div class="content-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-short">
+                        <h2 class="header-short__text">Contact us</h2>
+                        <div class="header-short__line"></div>
+                        <div class="header-short__line"></div>
+                        <a href="reservation.html" class="btn-yellow header-short__btn">Reservation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap bg-light">
+        <div class="content-wrap content-wrap--top">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="contacts-info">
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <div class="contacts-info__item"><img src="images/icons/con_phone_icon.png"></div>
+                                </div>
+                                <div class="col-xs-9 col-sm-8 col-md-6">
+                                    <div class="contacts-info__item"><a href="tel:8009757176">888-452-0440</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <div class="contacts-info__item"><img src="images/icons/con_print_icon.png"></div>
+                                </div>
+                                <div class="col-xs-9 col-sm-8 col-md-6">
+                                    <div class="contacts-info__item"><a href="tel:2067309099">888-483-8529</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <div class="contacts-info__item"><img src="images/icons/con_mail_icon.png"></div>
+                                </div>
+                                <div class="col-xs-9 col-sm-8 col-md-6">
+                                    <div class="contacts-info__item"><a href="mailto:info@domain.com">book@coachroyal.com</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="">
+                            <form method="post" id="contact-form" role="form">
+                                <h2 class="contact-form__top">E-MAIL CREDIT CARD AUTHORIZATION CONTRACT</h2>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="your-name" class="sr-only"></label>
+                                            <input id="your-name" type="text" class="form-control" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="res-date" class="sr-only"></label>
+                                                    <input id="res-date" type="text" class="form-control" placeholder="Reservation date">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="num-vehicles">
+                                                    <span class="num-vehicles__title">Number of vehicles</span>
+                                                    <div class="minus num-vehicles__count"><span>&#8211;</span></div>
+                                                    <div class="num num-vehicles__val">1</div>
+                                                    <input id="num-vehicles" value="1" type="hidden">
+                                                    <div class="plus num-vehicles__count"><span>+</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="contact-form__desc">I understand the amount of the confirmation will be the minimum amount
+                                            that
+                                            can be charged, and I also
+                                            understand the amount charged will be the amount of actual charges shown on the Trip
+                                            Confirmation(s). It
+                                            is
+                                            also understood that if prepayment is not received prior to date of service, my card will
+                                            automatically
+                                            be
+                                            charged the amount of the Trip Confirmation. By submitting this form, I confirm that I
+                                            familiarized
+                                            myself
+                                            with the rates on this website before making a reservation.</p>
+                                        <p class="contact-form__desc">I understand that reservation(s) listed below is (are) under following <span
+                                                class="orange-text">cancellation policy:</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="btn-group btn-group-vertical cancellation-group" data-toggle="buttons">
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <label class="btn active custom-radio-btn">
+                                                        <input type="radio" name='cancellation' checked><i class="fa fa-circle-o"></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>Non-cancellable</span>
+                                                    </label>
+                                                    <label class="btn custom-radio-btn">
+                                                        <input type="radio" name='cancellation'><i class="fa fa-circle-o "></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>SUV/Airport transfer 48 HRS</span>
+                                                    </label>
+                                                    <label class="btn custom-radio-btn">
+                                                        <input type="radio" name='cancellation'><i class="fa fa-circle-o "></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>Multi reservation 7 Dats</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <label class="btn custom-radio-btn">
+                                                        <input type="radio" name='cancellation'><i class="fa fa-circle-o"></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>Van's/Executive van’s 7 Days</span>
+                                                    </label>
+                                                    <label class="btn custom-radio-btn">
+                                                        <input type="radio" name='cancellation'><i class="fa fa-circle-o "></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>Limousine 2 Weeks</span>
+                                                    </label>
+
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4">
+                                                    <label class="btn custom-radio-btn">
+                                                        <input type="radio" name='cancellation'><i class="fa fa-circle-o"></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>Coach/Limo bus 30 Days</span>
+                                                    </label>
+                                                    <label class="btn custom-radio-btn">
+                                                        <input type="radio" name='cancellation'><i class="fa fa-circle-o"></i><i
+                                                            class="fa fa-dot-circle-o"></i><span>Sedan/Airport transfer 24 HRS</span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="pas-name" class="sr-only"></label>
+                                            <input id="pas-name" type="text" class="form-control" placeholder="Passenger's name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comp-name" class="sr-only"></label>
+                                            <input id="comp-name" type="text" class="form-control" placeholder="Company name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone" class="sr-only"></label>
+                                            <input id="phone" type="text" class="form-control" placeholder="Phone">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fax" class="sr-only"></label>
+                                            <input id="fax" type="text" class="form-control" placeholder="Fax">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last4" class="sr-only"></label>
+                                            <input id="last4" type="text" class="form-control" placeholder="Last 4 digits of a Credit Card">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birth" class="sr-only"></label>
+                                            <input id="birth" type="text" class="form-control" placeholder="Card holder Birth Date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="line1" class="sr-only"></label>
+                                            <input id="line1" type="text" class="form-control" placeholder="Address line 1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="line2" class="sr-only"></label>
+                                            <input id="line2" type="text" class="form-control" placeholder="Address line 1">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="country" class="sr-only"></label>
+                                            <input id="country" type="text" class="form-control" placeholder="Country">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state" class="sr-only"></label>
+                                            <input id="state" type="text" class="form-control" placeholder="State">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city" class="sr-only"></label>
+                                            <input id="city" type="text" class="form-control" placeholder="City">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="zip" class="sr-only"></label>
+                                            <input id="zip" type="text" class="form-control" placeholder="Zip">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-holder" class="sr-only"></label>
+                                            <input id="card-holder" type="text" class="form-control" placeholder="Card holder">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="exp-date" class="sr-only"></label>
+                                                    <input id="exp-date" type="text" class="form-control" placeholder="Exp. date">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="form-group">
+                                                    <label for="cw" class="sr-only"></label>
+                                                    <input id="cw" type="text" class="form-control" placeholder="CW">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 col-sm-3">
+                                                <div class="form-group">
+                                                    <img src="./images/icons/contacts_cvv.png">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="email" class="sr-only"></label>
+                                            <input id="email" type="text" class="form-control" placeholder="E-mail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reserv" class="sr-only"></label>
+                                            <input id="reserv" type="text" class="form-control" placeholder="Reservation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="signature-area__top"><span>Signature (use touchpad or mouse)</span>
+                                            <u class="js-clear-sign">Clear</u>
+                                        </p>
+                                        <div id="signatureArea" class="signature-area"></div>
+                                        <input type="hidden" name="signature" id="signature_field"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row up">
+                                            <div class="col-xs-6">
+
+                                                <div class="upload-name">
+                                                    Photo of your ID
+                                                    <div class='upload-val'></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="">
+                                                    <input id="photoId" type="file">
+                                                    <label for="photoId" class='upload '>Select File</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row up">
+                                            <div class="col-xs-6">
+                                                <div class="upload-name">
+                                                    <div class="upload-name ">
+                                                        Photo of Credit Card
+                                                        <div class='upload-val'></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="">
+                                                    <input id="photoF" type="file">
+                                                    <label for="photoF" class='upload'>Select File</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row up">
+                                            <div class="col-xs-6">
+                                                <div class="upload-name ">
+                                                    Back of Credit Card
+                                                    <div class='upload-val'></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="">
+                                                    <input id="photoB" type="file">
+                                                    <label for="photoB" class='upload'>Select File</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <!-- Button trigger modal -->
+                                        <div class="form-group agreed" data-toggle="modal" data-target="#agreedModal">
+                                            <div class="agreed__checkbox"><span class="agreed__checked"></span></div>
+                                            <div class="agreed__text">I read, understand and agree to <span class="underline orange-text">terms and conditions</span>
+                                                as well as rate that were provided
+                                                to me by
+                                                agent.
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade agreedModal" id="agreedModal" tabindex="-1" role="dialog"
+                                             aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                                aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        <h4 class="modal-header__top" id="myModalLabel"> You must read Terms &amp;
+                                                            Conditions and
+                                                            agree to
+                                                            them to continue.</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div id="modal-conditions" class="modal-conditions">
+                                                            <div class="modal-text">
+                                                                <p class="modal-body__text">1. <strong>Acceptance</strong>. Use of the
+                                                                    Contacts web
+                                                                    site at
+                                                                    www.coachroyal.com the on-line reservation services (the "Services")
+                                                                    provided by
+                                                                    Contacts, and the Contacts and Embarque Mobile Applications (each a
+                                                                    “Mobile
+                                                                    App”), are subject to the terms and conditions of use set forth below
+                                                                    ("Terms of
+                                                                    Use"), which include Contacts Privacy Policy, incorporated into these
+                                                                    Terms of
+                                                                    Use by reference.</p>
+                                                                <p class="modal-body__text">PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE
+                                                                    USING
+                                                                    THE WEB SITE, THE SERVICES,
+                                                                    OR THE MOBILE APP. BY USING THE WEB SITE,&nbsp; THE SERVICES, OR THE
+                                                                    MOBILE APP,
+                                                                    YOU AGREE TO THESE TERMS OF USE. IF AN INDIVIDUAL IS USING THE WEB SITE,
+                                                                    THE
+                                                                    SERVICES, OR THE MOBILE APP ON BEHALF OF A BUSINESS ENTITY, WHETHER AS
+                                                                    AN
+                                                                    EMPLOYEE, CONSULTANT OR AGENT OF SUCH BUSINESS ENTITY, BY DOING SO, SUCH
+                                                                    INDIVIDUAL REPRESENTS THAT THEY HAVE THE LEGAL CAPACITY AND AUTHORITY TO
+                                                                    BIND
+                                                                    SUCH BUSINESS ENTITY TO THE TERMS OF USE. "YOU" SHALL REFER BOTH TO THE
+                                                                    INDIVIDUAL ACCESSING THE WEB SITE, THE SERVICES, OR THE MOBILE APP ON
+                                                                    BEHALF OF
+                                                                    A BUSINESS ENTITY, IF ANY, AND ANY SUCH BUSINESS ENTITY ITSELF. Contacts
+                                                                    MAY
+                                                                    CHANGE THESE TERMS OF USE FROM TIME TO TIME WITHOUT NOTICE, AND SUCH
+                                                                    CHANGES
+                                                                    WILL BE EFFECTIVE ON THE DATE THEY ARE POSTED ON THE WEB SITE. USE OF
+                                                                    THE WEB
+                                                                    SITE, THE SERVICES, AND THE MOBILE APP AFTER SUCH CHANGES HAVE BEEN
+                                                                    POSTED
+                                                                    CONSTITUTES YOUR ACCEPTANCE OF ALL SUCH CHANGES. <strong>IF YOU DO NOT
+                                                                        AGREE TO
+                                                                        THESE TERMS OF USE, DO NOT USE THE WEB SITE, THE SERVICES, OR THE
+                                                                        MOBILE
+                                                                        APP.</strong></p>
+                                                                <p class="modal-body__text">2. <strong>Use of the Web Site, the Services,
+                                                                    and the
+                                                                    Mobile App</strong>. You
+                                                                    may only use the Web Site, the Services, and the Mobile App in
+                                                                    accordance with
+                                                                    the Terms of Use, any posted policies and procedures that appear on the
+                                                                    Web
+                                                                    Site, and for lawful purposes. You agree not to use the Web Site, the
+                                                                    Services,
+                                                                    or the Mobile App to: (a) transmit any material that infringes or
+                                                                    misappropriates any third party's copyright, trademark, trade secret,
+                                                                    patent, or
+                                                                    other proprietary rights, (b) transmit any material that is false,
+                                                                    inaccurate,
+                                                                    fraudulent, or misleading, (c) distribute computer viruses, worms, or
+                                                                    software
+                                                                    intended to damage or alter a computer system without the owner's
+                                                                    consent, (d)
+                                                                    use "auto-responders," "cancel-bots," or other similar mechanisms that
+                                                                    generate
+                                                                    excessive network traffic, (e) transmit any unlawful, harmful,
+                                                                    defamatory,
+                                                                    pornographic, obscene, vulgar, threatening, harassing or otherwise
+                                                                    objectionable
+                                                                    material, (f) send or relay any unsolicited advertising or chain
+                                                                    letters, (g)
+                                                                    exceed your permitted access or attempt to gain unauthorized access to
+                                                                    the Web
+                                                                    Site, the Services, or the Mobile App, or any part thereof, or other
+                                                                    accounts,
+                                                                    computer systems or networks, through login password mining or any other
+                                                                    means,
+                                                                    (h) frame any portions of the Web Site, the Services, or the Mobile App
+                                                                    within
+                                                                    another web site or establish links from any other web site to any page
+                                                                    of the
+                                                                    Web Site other than the home page or (i) resell use of, or access to,
+                                                                    the Web
+                                                                    Site, the Services, or the Mobile App to any third party without
+                                                                    Contacts prior
+                                                                    written consent. Contacts reserves the right to terminate your access to
+                                                                    the Web
+                                                                    Site, the Services, or the Mobile App at any time without notice if we
+                                                                    determine, in our sole discretion, that you have abused or violated any
+                                                                    of these
+                                                                    terms and conditions.</p>
+                                                                <p class="modal-body__text">3. <strong>Mobile Charges</strong>. You are
+                                                                    responsible
+                                                                    for payment of any costs
+                                                                    or expenses incurred as a result of downloading and using any Mobile
+                                                                    App,
+                                                                    including any operator network and roaming charges. Please check with
+                                                                    your
+                                                                    service provider for details.</p>
+                                                                <p class="modal-body__text">4. <strong>Mobile Application License</strong>.&nbsp;
+                                                                    Subject to your compliance
+                                                                    with these Terms of Use, Contacts grants you a limited non-exclusive,
+                                                                    non-transferable license to download and install a copy of the Mobile
+                                                                    App on a
+                                                                    single mobile device that you own or control and to run such copy of the
+                                                                    Mobile
+                                                                    App solely for your use.</p>
+                                                                <p class="modal-body__text">Unless otherwise agreed in writing you shall not
+                                                                    (i)
+                                                                    license, sublicense, sell,
+                                                                    resell, transfer, assign, distribute or otherwise commercially exploit
+                                                                    or make
+                                                                    available to any third party the Mobile Apps or Services in any way;
+                                                                    (ii) modify
+                                                                    or make derivative works based upon the Mobile Apps; (iii) create
+                                                                    Internet
+                                                                    “links” to the Web Site or “frame” or “mirror” the Mobile Apps or
+                                                                    Services on
+                                                                    any other server or wireless or Internet-based device; (iv) reverse
+                                                                    engineer or
+                                                                    access the Mobile Apps or Services in order to (a) design or build a
+                                                                    competitive
+                                                                    product or service, (b) design or build a product using similar ideas,
+                                                                    features,
+                                                                    functions or graphics of the Services or Mobile App or Services, or (c)
+                                                                    copy any
+                                                                    ideas, features, functions or graphics of the Web Site, Services, or
+                                                                    Mobile App,
+                                                                    or (v) launch an automated program or script, including, but not limited
+                                                                    to, web
+                                                                    spiders, web crawlers, web robots, web ants, web indexers, bots, viruses
+                                                                    or
+                                                                    worms, or any program which may make multiple server requests per
+                                                                    second, or
+                                                                    unduly burdens or hinders the operation and/or performance of the Web
+                                                                    Site,
+                                                                    Services, or Mobile App.</p>
+                                                                <p class="modal-body__text">5. <strong>ID Number, Password and
+                                                                    Security</strong>.
+                                                                    You are responsible for
+                                                                    maintaining the confidentiality of any user ID and/or password provided
+                                                                    to you
+                                                                    by Contacts for use in connection with the Web Site, the Services, or
+                                                                    the Mobile
+                                                                    App. You are solely responsible for all activities that occur under your
+                                                                    user ID
+                                                                    and/or password, and you agree to notify Contacts immediately of any
+                                                                    unauthorized use of your user ID and/or password or any other breach of
+                                                                    security
+                                                                    related to the Web Site, the Services, or the Mobile App. CAREY WILL NOT
+                                                                    BE
+                                                                    LIABLE FOR ANY LOSS OR DAMAGE ARISING FROM YOUR FAILURE TO SAFEGUARD
+                                                                    YOUR USER
+                                                                    ID AND/OR PASSWORD OR TO COMPLY WITH THIS SECTION.</p>
+                                                                <p class="modal-body__text">6. <strong>Services</strong>. Contacts provision
+                                                                    to you
+                                                                    of the Services may be
+                                                                    subject to other terms, conditions and restrictions posted on the Web
+                                                                    Site, the
+                                                                    Mobile App or otherwise communicated in writing to you by Contacts,
+                                                                    including
+                                                                    via email. The Services are subject to availability and all price quotes
+                                                                    are
+                                                                    estimates. Please refer to the Frequently Asked Questions page and/or
+                                                                    Service
+                                                                    Terms of Use page for more information.</p>
+                                                                <p class="modal-body__text">&nbsp;</p>
+                                                                <p class="modal-body__text">7. <strong>Proprietary Rights and Communication
+                                                                    with
+                                                                    Contacts</strong>.</p>
+                                                                <p class="modal-body__text">(i) The Web Site and the Mobile App, and certain
+                                                                    content
+                                                                    therein, the Services,
+                                                                    and any underlying software may be protected by copyright, trademark,
+                                                                    patent,
+                                                                    and/or other intellectual property and proprietary rights laws and are
+                                                                    owned
+                                                                    (along with all proprietary rights therein, including all rights, in and
+                                                                    to the
+                                                                    Web Site, the Services, and the Mobile App, and any suggestions, ideas,
+                                                                    enhancement requests, feedback, recommendations or other information
+                                                                    provided by
+                                                                    you or any other party relating to the Web Site, the Services, or the
+                                                                    Mobile
+                                                                    App) by Contacts International and/or its licensors. You agree that you
+                                                                    will not
+                                                                    copy, distribute, republish, display, post, transmit, download, or
+                                                                    modify any
+                                                                    content you obtain from the Web Site, the Services, or the Mobile App,
+                                                                    or any
+                                                                    other Contacts or licensor owned intellectual property without Contacts
+                                                                    prior
+                                                                    permission; provided, however, that you may download or print a copy of
+                                                                    information from the Web Site for your use in learning about, reserving,
+                                                                    or
+                                                                    using the Services.</p>
+                                                                <p class="modal-body__text">(ii) Excepting any suggestions, ideas,
+                                                                    enhancement
+                                                                    requests, feedback,
+                                                                    recommendations or any other information deemed proprietary and detailed
+                                                                    above
+                                                                    in 6(i), any other communication or material you transmit to us by email
+                                                                    or
+                                                                    otherwise, including any data, questions, comments, suggestions, or the
+                                                                    like is,
+                                                                    and will be treated as, nonconfidential and nonproprietary. Except to
+                                                                    the extent
+                                                                    expressly covered by our Privacy Policy, anything you transmit or post
+                                                                    may be
+                                                                    used by us for any purpose, including but not limited to, reproduction,
+                                                                    disclosure, transmission, publication, broadcast and posting.
+                                                                    Furthermore, you
+                                                                    expressly agree that we are free to use any ideas, concepts, know-how,
+                                                                    or
+                                                                    techniques contained in any communication you send to us without
+                                                                    compensation
+                                                                    and for any purpose whatsoever, including but not limited to,
+                                                                    developing,
+                                                                    manufacturing and marketing products and services using such
+                                                                    information.</p>
+                                                                <p class="modal-body__text">8. <strong>Third Party Applications</strong>.
+                                                                    The Web
+                                                                    Site, the Services, and the
+                                                                    Mobile App may enable you to link or connect you to use functionalities
+                                                                    of third
+                                                                    party applications, services or sites that are not owned or controlled
+                                                                    by
+                                                                    Contacts (“Third Party Applications”). Any Third Party Applications are
+                                                                    subject
+                                                                    to the terms and conditions of the relevant third party provider.
+                                                                    Contacts has
+                                                                    no control over and is not responsible or liable for any matters
+                                                                    relating to
+                                                                    your dealings or transactions with such third parties and over any third
+                                                                    party
+                                                                    content, syndicated content, applications, services, sites,
+                                                                    advertisements,
+                                                                    links, privacy policies and/or practices of any such third parties that
+                                                                    may be
+                                                                    accessible via the Web Site, the Services, or the Mobile App. It is your
+                                                                    responsibility to check the privacy policies and terms of service and
+                                                                    usage of
+                                                                    all third party sites that you visit prior to downloading or using any
+                                                                    such
+                                                                    Third Party Applications.</p>
+                                                                <p class="modal-body__text">9. <strong>Warranty Disclaimer</strong>. THE WEB
+                                                                    SITE,
+                                                                    THE SERVICES, THE MOBILE
+                                                                    APP AND ANY INFORMATION PROVIDED THROUGH THE WEB SITE, THE SERVICES, OR
+                                                                    MOBILE
+                                                                    APP, INCLUDING ANY THIRD PARTY APPLICATIONS OR THIRD PARTY PROVIDED
+                                                                    INFORMATION,
+                                                                    ARE PROVIDED BY CAREY ON AN "AS IS" BASIS, AND NEITHER CAREY NOR ITS
+                                                                    SUBSIDIARIES, PARTNERS, AFFILIATES, VENDORS OR SUBCONTRACTORS MAKE ANY
+                                                                    REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE
+                                                                    OPERATION OF THE WEB SITE, THE SERVICES, OR THE MOBILE APP OR THE
+                                                                    INFORMATION
+                                                                    MADE AVAILABLE BY OR THROUGH THE WEB SITE, THE SERVICES, OR THE MOBILE
+                                                                    APP. IN
+                                                                    ADDITION, CAREY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, STATUTORY
+                                                                    AND
+                                                                    NON-STATUTORY, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+                                                                    MERCHANTABILITY, ACCURACY OF INFORMATION, TITLE, QUIET ENJOYMENT,
+                                                                    FITNESS FOR A
+                                                                    PARTICULAR PURPOSE AND NON-INFRINGEMENT, OR ANY WARRANTY ARISING FROM
+                                                                    COURSE OF
+                                                                    DEALING OR CUSTOM OF TRADE. NEITHER CAREY NOR ANY OF ITS SUBSIDIARIES,
+                                                                    PARTNERS,
+                                                                    AFFILIATES, VENDORS OR SUBCONTRACTORS WARRANTS THAT USE OF THE WEB SITE,
+                                                                    THE
+                                                                    SERVICES, OR THE MOBILE APP WILL BE UNINTERRUPTED, AVAILABLE AT ANY TIME
+                                                                    OR FROM
+                                                                    ANY PARTICULAR LOCATION, SECURE OR ERROR-FREE, THAT DEFECTS WILL BE
+                                                                    CORRECTED,
+                                                                    OR THAT THE WEB SITE, THE SERVICES, OR THE MOBILE APP ARE FREE OF
+                                                                    VIRUSES OR
+                                                                    OTHER POTENTIALLY HARMFUL COMPONENTS. Some jurisdictions may not allow
+                                                                    the
+                                                                    exclusion of certain warranties, so some of the above exclusions may not
+                                                                    apply
+                                                                    to you.</p>
+                                                                <p class="modal-body__text">10. <strong>Limitation of Liability</strong>. IN
+                                                                    NO
+                                                                    EVENT WILL CAREY, ANY OF ITS
+                                                                    SUBSIDIARIES, PARTNERS, AFFILIATES, VENDORS OR SUBCONTRACTORS, INCLUDING
+                                                                    THEIR
+                                                                    RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES OR AGENTS, BE LIABLE FOR
+                                                                    INDIRECT,
+                                                                    INCIDENTAL, SPECIAL, PUNITIVE OR CONSEQUENTIAL DAMAGES (INCLUDING
+                                                                    WITHOUT
+                                                                    LIMITATION THOSE RESULTING FROM LOST PROFITS, LOST DATA OR BUSINESS
+                                                                    INTERRUPTION) ARISING OUT OF THE USE OF OR INABILITY TO USE THE WEB
+                                                                    SITE, THE
+                                                                    SERVICES, OR THE MOBILE APP, OR ANY WEBSITES OR THIRD PARTY APPLICATIONS
+                                                                    LINKED
+                                                                    TO THE WEB SITE, THE SERVICES, OR THE MOBILE APP, WHETHER BASED ON
+                                                                    CONTRACT,
+                                                                    TORT OR OTHER LEGAL THEORY, AND REGARDLESS OF WHETHER CAREY KNEW OR WAS
+                                                                    ADVISED
+                                                                    OF THE POSSIBILITY OF SUCH DAMAGES. CAREY'S AGGREGATE LIABLITY FOR
+                                                                    DIRECT
+                                                                    DAMAGES ARISING FROM OR RELATING TO THE WEB SITE, THE SERVICES, OR THE
+                                                                    MOBILE
+                                                                    APP (REGARDLESS OF THE CAUSE OF ACTION, WHETHER UNDER CONTRACT, TORT, OR
+                                                                    OTHER
+                                                                    LEGAL THEORY) IS LIMITED TO THE GREATER OF (i) THE AMOUNT PAID BY THE
+                                                                    USER TO
+                                                                    CAREY FOR THE SPECIFIC SERVICE THAT IS THE SUBJECT OF THE DISPUTE OR
+                                                                    (ii) $50.
+                                                                    THE FOREGOING LIMITATIONS OF LIABILITY ARE INDEPENDENT OF, AND SHALL
+                                                                    APPLY
+                                                                    REGARDLESS OF, ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED OR
+                                                                    EXCLUSIVE
+                                                                    REMEDY. You acknowledge that Contacts has agreed to provide the Web
+                                                                    Site, the
+                                                                    Services, and the Mobile App in reliance on the exclusions of liability
+                                                                    and
+                                                                    disclaimers of warranty set forth herein. Some jurisdictions do not
+                                                                    allow the
+                                                                    limitation of incidental or consequential damages, so the above
+                                                                    limitation may
+                                                                    not apply to you.</p>
+                                                                <p class="modal-body__text">11. <strong>Indemnification</strong>. You agree
+                                                                    to
+                                                                    indemnify and hold Contacts,
+                                                                    its subsidiaries, partners, affiliates, vendors, subcontractors,
+                                                                    officers,
+                                                                    employees, and agents harmless from any and all losses, liabilities,
+                                                                    damages
+                                                                    and/or costs (including reasonable attorneys' fees) arising from any
+                                                                    third-party
+                                                                    claims arising from or related to your use of the Web Site, the
+                                                                    Services, or the
+                                                                    Mobile App, or your violation of the Terms of Use or the Privacy Policy.
+                                                                </p>
+                                                                <p class="modal-body__text">12. <strong>Payment</strong>.&nbsp; Contacts
+                                                                    uses a
+                                                                    third-party payment processor
+                                                                    (the “Payment Processor”) to link your credit card account to pay for
+                                                                    the
+                                                                    Services booked on the Web Site and through the Mobile App. The
+                                                                    processing of
+                                                                    payments or credits, as applicable, in connection with your use of the&nbsp;
+                                                                    Web
+                                                                    Site, the Services, and the Mobile App will be subject to the terms,
+                                                                    conditions
+                                                                    and privacy policies of the Payment Processor and your credit card
+                                                                    issuer in
+                                                                    addition to these Terms of Use. Contacts is not responsible for any
+                                                                    errors by
+                                                                    the Payment Processor. In connection with your use of the Web Site, the
+                                                                    Services, or the Mobile App, Contacts will obtain certain transaction
+                                                                    details,
+                                                                    which Contacts will use solely in accordance with the Privacy Policy.
+                                                                </p>
+                                                                <p class="modal-body__text">13. <strong>Privacy</strong>. Contacts takes the
+                                                                    privacy
+                                                                    of you and your
+                                                                    information very seriously. For further information about what
+                                                                    information we
+                                                                    collect and how we use such information, please view our Privacy Policy
+                                                                    [link to
+                                                                    Privacy Policy].</p>
+                                                                <p class="modal-body__text">14. <strong>Severability</strong>. If any part
+                                                                    of these
+                                                                    Terms of Use shall be
+                                                                    held or declared to be invalid or unenforceable for any reason by any
+                                                                    court of
+                                                                    competent jurisdiction, such provision shall be ineffective but shall
+                                                                    not affect
+                                                                    any other part of these Terms of Use.</p>
+                                                                <p class="modal-body__text">15. <strong>Waiver; Remedies</strong>. The
+                                                                    failure of
+                                                                    Contacts to partially or
+                                                                    fully exercise any rights or the waiver of Contacts of any breach of
+                                                                    these Terms
+                                                                    of Use by you, shall not prevent a subsequent exercise of such right by
+                                                                    Contacts
+                                                                    or be deemed a waiver by Contacts of any subsequent breach by you of the
+                                                                    same or
+                                                                    any other term of these Terms of Use. The rights and remedies of
+                                                                    Contacts under
+                                                                    these Terms of Use and any other applicable agreement between you and
+                                                                    Contacts
+                                                                    shall be cumulative, and the exercise of any such right or remedy shall
+                                                                    not
+                                                                    limit Contacts right to exercise any other right or remedy.</p>
+                                                                <p class="modal-body__text">16. <strong>International Access</strong>. The
+                                                                    Web Site,
+                                                                    the Services, and the
+                                                                    Mobile App are provided from the United States of America and all
+                                                                    servers that
+                                                                    make it available reside in the U.S.A. The laws of other countries may
+                                                                    differ
+                                                                    regarding the access and use of the Web Site and Service. We make no
+                                                                    representations regarding the legality of this Web Site,&nbsp; the
+                                                                    Services, or
+                                                                    the Mobile App in any other country and it is your responsibility to
+                                                                    ensure that
+                                                                    your use complies with all applicable laws outside of the U.S.A.</p>
+                                                                <p class="modal-body__text">17. <strong>Arbitration</strong>. Any and all
+                                                                    disputes
+                                                                    pursuant to these Terms of
+                                                                    Use, or otherwise between the parties, shall be submitted to binding
+                                                                    arbitration
+                                                                    in the State of New York in New York County in accordance with the
+                                                                    commercial
+                                                                    rules of the American Arbitration Association ("AAA") then in effect.
+                                                                    The
+                                                                    arbitration panel shall consist of one (1) neutral arbitrator if the
+                                                                    amount in
+                                                                    controversy in less than $25,000, otherwise the panel shall consist of
+                                                                    three (3)
+                                                                    neutral arbitrators, each an attorney with at least five (5) years of
+                                                                    experience
+                                                                    in the primary area of law as to which the dispute relates. The costs of
+                                                                    the
+                                                                    arbitration shall be shared equally by the parties, provided that, the
+                                                                    arbitrator may award attorneys costs and expenses to the prevailing
+                                                                    party. The
+                                                                    parties agree that any actions or disputes shall be adjudicated between
+                                                                    the
+                                                                    parties hereto, and shall not be combined with any other actions or
+                                                                    disputes of
+                                                                    other parties. Notwithstanding the foregoing, this arbitration clause
+                                                                    shall not
+                                                                    in any way be deemed to limit Contacts right to commence an action in an
+                                                                    appropriate court (and without submitting to arbitration) to protect its
+                                                                    intellectual property rights or enjoin prohibited use of the Web Site,
+                                                                    the
+                                                                    Service, and the Mobile App.</p>
+                                                                <p class="modal-body__text">18. <strong>Governing Law</strong>. The laws of
+                                                                    the
+                                                                    State of New York shall
+                                                                    govern these Terms of Use. Subject to the arbitration provision above,
+                                                                    YOU
+                                                                    HEREBY EXPRESSLY CONSENT TO EXCLUSIVE JURISDICTION AND VENUE IN THE
+                                                                    COURTS
+                                                                    LOCATED IN NEW YORK COUNTY, NEW YORK FOR ALL MATTERS ARISING IN
+                                                                    CONNECTION WITH
+                                                                    THESE TERMS OF USE OR YOUR ACCESS OR USE OF THE WEB SITE, THE SERVICE,
+                                                                    OR THE
+                                                                    MOBILE APP.</p>
+                                                                <p class="modal-body__text">19. <strong>Force Majeure</strong>. Contacts
+                                                                    shall not
+                                                                    be responsible for damages
+                                                                    caused by delay or failure to perform, in full or in part, any of its
+                                                                    obligations in connection with the Web Site, the Services, or the Mobile
+                                                                    App
+                                                                    provided that there is due diligence in attempted performance under the
+                                                                    circumstances and that such delay or failure is due to fire, earthquake,
+                                                                    unusually severe weather, strikes, government sanctioned embargo, flood,
+                                                                    act of
+                                                                    God, act of war or terrorism, act of any public authority or sovereign
+                                                                    government, civil disorder, delay or destruction caused by public
+                                                                    carrier, or
+                                                                    any other circumstance substantially beyond the control of Contacts.</p>
+                                                                <p class="modal-body__text">20. <strong>Entire Agreement</strong>. These
+                                                                    Terms of
+                                                                    Use and the other policies
+                                                                    and terms posted on the Web Site set forth the entire agreement between
+                                                                    you and
+                                                                    Contacts on this subject matter and supersede all other negotiations,
+                                                                    understandings, statements and agreements between the parties.</p>
+                                                                <p class="modal-body__text">21. <strong>Questions</strong>. Should you have
+                                                                    any
+                                                                    questions regarding these
+                                                                    Terms of Use you may contact us at <a href="mailto:book@coachroyal.com">book@coachroyal.com</a>.
+                                                                    Notwithstanding the foregoing, Contacts is under no obligation to
+                                                                    provide
+                                                                    technical support for the Web Site, the Service, or the Mobile App.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a type="button" id="term-decline" class="btn-yellow modal-footer__link"
+                                                               data-dismiss="modal">
+                                                                DECLINE
+                                                            </a>
+                                                            <a type="button" id="term-agree" class="btn-yellow modal-footer__link"
+                                                               data-dismiss="modal">AGREE
+                                                                AND CONTINUE TO
+                                                                RESERVATION
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <button type="submit" value="" class="btn-yellow btn-yellow--inv2 contact-form__btn">submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="credit-form-blank">
+                            <a href="cc-authoriztn1.pdf" class="credit-form-blank__item" target="_blank">Credit Card Authorization
+                                Contract</a>
+                            <a href="cc-authoriztn2.pdf" class="credit-form-blank__item" target="_blank">Non-Cancellable Credit Card
+                                Authorization
+                                Contract</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div w3-include-html="views/footer.html"></div>
+</footer>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/jSignature.min.js"></script>
+<script src="js/libs/jquery.viewportchecker.min.js"></script>
+<script src="js/libs/w3data.js"></script>
+<script>
+    w3IncludeHTML();
+</script>
+<script>
+    $(function () {
+        initActive('contact.html')
+    });
+</script>
+<!-- build:js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
+<script>
+    $(function () {
+        initActive('contact.html');
+        // Signature
+        $('#signatureArea').jSignature();
+        $('.js-clear-sign').click(function () {
+            $('#signatureArea').jSignature('reset');
+            $('#signature_field').val('');
+        });
+
+        var $sigdiv = $("#signatureArea");
+        $sigdiv.bind('change', function (e) {
+            var signature = $sigdiv.jSignature("getData", "default");
+            $('#signature_field').val(signature);
+        });
+
+        //
+    });
+</script>
+</body>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <script src="js/libs/w3data.js"></script>
+    <title>Limousine</title>
+<body>
+
+<header>
+    <div w3-include-html="views/header.html"></div>
+</header>
+<section class="">
+    <div class="content-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-short">
+                        <h2 class="header-short__text">Contact us</h2>
+                        <div class="header-short__line"></div>
+                        <div class="header-short__line"></div>
+                        <a href="reservation.html" class="btn-yellow header-short__btn">Reservation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap bg-light">
+        <div class="content-wrap content-wrap--top">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="contacts-info">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <div class="contacts-info__item"><img src="images/icons/con_phone_icon.png"></div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="contacts-info__item"><a href="tel:4253726570">(425)372-6570</a>
+                                        <br><span class="contacts-info__desc">Eastside Division</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <div class="contacts-info__item"><img src="images/icons/con_phone_icon.png"></div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="contacts-info__item">
+                                        <a href="tel:2064539128">(206)453-9128</a>
+                                        <br><span class="contacts-info__desc">Southside Division (Airport)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-xs-1 col-xs-offset-1">
+                                    <div class="contacts-info__item"><img src="images/icons/con_mail_icon.png"></div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="contacts-info__item"><a href="info@seattleelitetown.com">info@seattleelitetown.com</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form method="post" id="contact-form" role="form">
+                            <div class="row">
+                                <div class="col-sm-offset-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name" class="sr-only"></label>
+                                        <input id="name" type="text" class="form-control" placeholder="Your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comp-name" class="sr-only"></label>
+                                        <input id="comp-name" type="text" class="form-control" placeholder="Company name (optional)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="sr-only"></label>
+                                        <input id="phone" type="text" class="form-control" placeholder="Phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mail" class="sr-only"></label>
+                                        <input id="mail" type="text" class="form-control" placeholder="E-mail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="desc" class="sr-only"></label>
+                                        <textarea rows="5" id="desc" type="text" class="form-control"
+                                                  placeholder="Brief Description of Information Request"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-offset-3 col-sm-6">
+                                    <div class="g-recaptcha captcha"
+                                         data-sitekey="6Ld1mw0UAAAAADcjqKQPtbbHpmcRYR_EUzqYUDx_"></div>
+                                </div>
+                                <div class=" col-sm-offset-3 col-sm-6">
+                                    <div class="form-group">
+                                        <button type="submit" value="" class="btn-yellow contact-form__btn">submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div w3-include-html="views/footer.html"></div>
+</footer>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/jSignature.min.js"></script>
+<script src="js/libs/jquery.viewportchecker.min.js"></script>
+<script src="js/libs/w3data.js"></script>
+<script>
+    w3IncludeHTML();
+</script>
+<script>
+    $(function () {
+        initActive('contact.html')
+    });
+</script>
+<!-- build:js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>

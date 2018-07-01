@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <script src="js/libs/w3data.js"></script>
+    <title>Limousine</title>
+</head>
+<body>
+<header>
+    <div w3-include-html="views/header.html"></div>
+</header>
+<section id="rates" class="">
+    <div class="content-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-short">
+                        <h2 class="header-short__text">Rates</h2>
+                        <div class="header-short__line"></div>
+                        <div class="header-short__line"></div>
+                        <a href="reservation.html" class="btn-yellow header-short__btn">Reservation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap bg-light">
+        <div class="content-wrap content-wrap--top">
+            <div class="container-fluid">
+                <div class="row">
+                    <ul id="" class="nav nav-tabs rate-nav-tabs" role="tablist">
+                        <li role="presentation" class="active active-tab-left rate-nav-tabs__item">
+
+                            <a class="rate-nav-tabs__link" href="#airport" aria-controls="airport" role="tab" data-toggle="tab">
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                Airport Transportation</a>
+                        </li>
+                        <li role="presentation" class="active-tab-right rate-nav-tabs__item">
+                            <a class="rate-nav-tabs__link" href="#hourly" aria-controls="hourly" role="tab" data-toggle="tab">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                Hourly rates</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="airport">
+                            <div class="rate-table" id="rate-airport">
+                                <!--<div class="rate-table__row head-row">-->
+                                <!--<div class="rate-table__cell head-vehicle">Vehicle</div>-->
+                                <!--<div class="rate-table__cell head-rate">Rate</div>-->
+                                <!--</div>-->
+                                <div class="rate-table__row" w3-repeat="x in ratesAirport">
+                                    <div class="rate-table__cell">
+                                        <span>{{x.city}}</span>
+                                    </div>
+                                    <div class="rate-table__cell">
+                                        <a class="btn-reserve visible-xs"
+                                           href="reservation.html"><span>Reserve</span></a>
+                                        <span class="btn-price">{{x.rate}}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="hourly">
+                            <div class="rate-table" id="rate-hourly">
+                                <!--<div class="rate-table__row head-row">-->
+                                <!--<div class="rate-table__cell head-vehicle">Vehicle</div>-->
+                                <!--<div class="rate-table__cell head-rate">Rate</div>-->
+                                <!--</div>-->
+                                <div class="rate-table__row" w3-repeat="x in ratesHourly">
+                                    <div class="rate-table__cell">
+                                        <span>{{x.vehicle}}</span>
+                                    </div>
+                                    <div class="rate-table__cell">
+                                        <a class="btn-reserve visible-xs"
+                                           href="reservation.html"><span>Reserve</span></a>
+                                        <span class="btn-price">{{x.rate}}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div w3-include-html="views/footer.html"></div>
+</footer>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery.viewportchecker.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/w3data.js"></script>
+<script src="js/content.js"></script>
+<script>
+    w3IncludeHTML();
+    w3DisplayData("rate-airport", _content);
+    w3DisplayData("rate-hourly", _content);
+</script>
+<!-- build:js -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
+<script>
+    $(function () {
+        initActive('rates.html')
+    });
+</script>
+</body>

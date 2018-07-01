@@ -1,0 +1,403 @@
+.quote-captcha {
+ transform: scale(0.8) translateX(-42px) translateY(130px);
+  @include respond-to($xs-bt){
+    transform:scale(0.8) translateX(-44px) translateY(10px);
+  }
+}
+
+.reservation-title {
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: #0b0f1d;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 40px 0 50px;
+  //text-transform: uppercase;
+  span {
+    background: #fff;
+    padding: 0 15px;
+  }
+  @include respond-to($xs-bt) {
+    font-size: 20px;
+  }
+}
+
+.add-info {
+  border: 1px solid #0b0f1d;
+  padding: 15px 20px 30px 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 18px;
+}
+
+.add-agree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 18px;
+}
+
+.pickup {
+  display: flex;
+  align-items: center;
+  &__text {
+    display: block;
+    font-family: "Proxima Nova Rg", sans-serif;
+    font-size: 18px;
+    color: #000;
+    margin-right: 15px;
+  }
+}
+
+.label-wrap {
+  display: flex;
+  justify-content: center;
+  //padding-bottom: 20px;
+  &--left {
+    justify-content: flex-start;
+  }
+}
+
+.captcha {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.8);
+  margin-bottom: 10px;
+  @include respond-to($xs-bt) {
+    transform: scale(0.5);
+  }
+}
+
+.top-margin {
+  margin-top: 30px;
+}
+
+.date-icon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.contacts-info {
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  &--mar0 {
+    margin: 0;
+  }
+  &__item {
+    margin: 10px 0;
+  }
+  &__desc {
+    font-size: 14px;
+  }
+}
+
+.contact-form {
+  &__top {
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0b0f1d;
+    //text-transform: uppercase;
+    @include respond-to($xs-bt) {
+      font-size: 20px;
+    }
+  }
+  &__desc {
+    color: #0b0f1d;
+    font-family: "Proxima Nova Con Lt", sans-serif;
+  }
+  &__btn {
+    padding: 2px 50px !important;
+    font-size: 20px !important;
+    width: 100% !important;
+    height: initial !important;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+      color: $yellow !important;
+    }
+  }
+}
+
+.num-vehicles {
+  border: solid 1px #7d7d7d;
+  height: 50px;
+  font-family: Proxima Nova Con Th, sans-serif;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #0b0f1d;
+  @include respond-to($sm-bt) {
+    height: 40px;
+  }
+  @include respond-to($xs-bt) {
+    margin-top: 30px;
+  }
+  &__title {
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 15px;
+    position: absolute;
+    top: -20px;
+    left: 15px;
+  }
+  &__val {
+    border-left: solid 1px #7d7d7d;
+    border-right: solid 1px #7d7d7d;
+    flex-basis: 50%;
+    @extend %flex-center;
+  }
+  &__count {
+    font-size: 25px;
+    flex-basis: 25%;
+    @extend %flex-center;
+  }
+}
+
+.agreed {
+  //margin: 20px 0;
+  display: flex;
+  align-items: center;
+  &__text {
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    width: calc(100% - 30px);
+  }
+  &__checkbox {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $yellow !important;
+    border-radius: 0;
+    margin-right: 15px;
+  }
+  &__checked {
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: 0;
+    right: 0;
+    background-color: $yellow;
+    margin: 0 auto;
+    @extend %v-align;
+  }
+}
+
+//style signature
+.signature-area canvas {
+  height: 135px !important;
+  border: 1px dotted !important;
+  color: #0b0f1d;
+}
+
+.signature-area__top {
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  color: #0b0f1d;
+}
+
+%placeholder {
+  color: #646464;
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 15px;
+}
+
+.form-control {
+  border-radius: 0;
+  border: solid 1px #7d7d7d !important;
+  height: 50px;
+  color: #646464;
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 16px;
+  transition: opacity 1s;
+  //transition: all 1s;
+  &:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+    &::-webkit-input-placeholder {
+      opacity: 0.5;
+    }
+    &::-moz-placeholder {
+      opacity: 0.5;
+    }
+    &:-ms-input-placeholder {
+      opacity: 0.5;
+    }
+    &:-moz-placeholder {
+      opacity: 0.5;
+    }
+  }
+  @include respond-to($sm-bt) {
+    height: 40px;
+  }
+  &::-webkit-input-placeholder {
+    color: #646464;
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 15px;
+    transition: opacity 1s;
+  }
+  &::-moz-placeholder {
+    color: #646464;
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 15px;
+    transition: opacity 1s;
+  }
+  &:-ms-input-placeholder {
+    color: #646464;
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 15px;
+    transition: opacity 1s;
+  }
+  &:-moz-placeholder {
+    color: #646464;
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 15px;
+    transition: opacity 1s;
+  }
+
+}
+
+.credit-form-blank {
+
+  &__item {
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    display: block;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__item:first-child:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 33px;
+    height: 18px;
+    background: url('../images/icons/contacts_pdf.png');
+  }
+
+  &__item:last-child:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 33px;
+    height: 18px;
+    background: url('../images/icons/contacts_pdf.png');
+  }
+}
+
+//style for upload
+input[type='file'] {
+  opacity: 0;
+  display: none;
+}
+
+.upload-name {
+  margin-top: 10px;
+  height: 50px;
+}
+
+.upload-val {
+  color: $yellow;
+}
+
+//style radio button
+
+input[type="radio"] {
+  display: none;
+}
+
+.custom-radio-btn {
+  outline: 0 !important;
+  box-shadow: none !important;
+  &:hover, &:focus, &:active {
+    box-shadow: none !important;
+  }
+}
+
+.custom-radio-btn .btn {
+  display: block;
+}
+
+.custom-radio-btn.btn span {
+  padding-left: 15px;
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.custom-radio-btn input[type="radio"] ~ i.fa.fa-circle-o {
+  color: #c8c8c8;
+  font-size: 18px;
+  display: inline;
+}
+
+.custom-radio-btn input[type="radio"] ~ i.fa.fa-dot-circle-o {
+  font-size: 18px;
+  display: none;
+}
+
+.custom-radio-btn input[type="radio"]:checked ~ i.fa.fa-circle-o {
+  display: none;
+}
+
+.custom-radio-btn input[type="radio"]:checked ~ i.fa.fa-dot-circle-o {
+  color: $yellow;
+  display: inline;
+}
+
+.custom-radio-btn:hover input[type="radio"] ~ i.fa {
+  color: $yellow;
+}
+
+.cancellation-group[data-toggle="buttons"] .custom-radio-btn.active {
+  color: $yellow;
+}
+
+.cancellation-group[data-toggle="buttons"] .custom-radio-btn {
+  display: block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: none;
+  border: 0px solid #c8c8c8;
+  border-radius: 3px;
+  color: #c8c8c8;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.cancellation-group[data-toggle="buttons"] .custom-radio-btn:hover {
+  color: $yellow;
+}
+
+.cancellation-group[data-toggle="buttons"] .custom-radio-btn:active, .cancellation-group[data-toggle="buttons"] .custom-radio-btn.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+

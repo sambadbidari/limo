@@ -1,0 +1,84 @@
+
+a {
+  text-decoration: none !important;
+  outline: 0 !important;
+  color: $body-bg;
+
+}
+
+div, p {
+  outline: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #0b0f1d;
+  //color: $nav-bg;
+  padding: 0 !important;
+}
+
+.wrap {
+  position: relative;
+  margin: 0 60px;
+  @include respond-to($desktop) {
+    margin: 0 40px;
+  }
+  @include respond-to($tablet) {
+    margin: 0 20px;
+  }
+  @include respond-to($phone) {
+    margin: 0 10px;
+  }
+}
+
+.content-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  @include respond-to($desktop) {
+    width: 90%;
+  }
+  @include respond-to($tablet) {
+    width: 90%;
+  }
+  @include respond-to($phone) {
+    width: 100%;
+  }
+}
+
+.content-wrap {
+  max-width: 100%;
+  width: 940px;
+  margin: 0 auto;
+  &--top{
+   @include responsive-val-lg(padding-top, 60px);
+   @include responsive-val-lg(padding-bottom, 60px);
+  }
+  @include respond-to($md-bt) {
+    width: 90%;
+  }
+}
+
+
+.bg-light {
+  background-color: #ffffff;
+}
+
+.top-margin {
+  margin-top: 60px;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+.bg-dark {
+  background-color: rgba(11,15,29, 0.8);
+}
+
+.empty-content {
+  min-height: 50vh;
+}

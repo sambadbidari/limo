@@ -1,0 +1,43 @@
+%arrows {
+  background-color: transparent;
+  border: 0;
+  color: $nav-bg;
+  font-size: 35px;
+  outline: 0;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%v-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%rate-tab {
+  font-family: "Oswald Rg", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+  .fa {
+    font-size: 40px;
+    padding-right: 20px;
+  }
+  @include respond-to($sm-bt) {
+    font-size: 24px;
+    .fa {
+      font-size: 30px;
+    }
+  }
+  @include respond-to($xs-bt) {
+    font-size: 18px;
+    .fa {
+      font-size: 25px;
+    }
+  }
+}

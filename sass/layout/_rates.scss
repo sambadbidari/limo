@@ -1,0 +1,202 @@
+$rate-tab-height: 120px;
+$rate-tab-item-height: 89px;
+$rate-tab-color-active: #f9f9f9;
+$rate-tab-color: #f5f5f2;
+
+.rate-nav-tabs {
+  background-color: $rate-tab-color-active !important;
+  border: 0;
+  height: $rate-tab-height;
+
+  @include respond-to($sm-bt) {
+    height: 100px;
+  }
+  @include respond-to($xs-bt) {
+    height: inherit;
+  }
+  &__item {
+    background-color: $rate-tab-color;
+    //height: $rate-tab-item-height;
+    position: relative;
+    width: 50%;
+    @include respond-to($sm-bt) {
+      //height: 80px;
+    }
+    @include respond-to($xs-bt) {
+      //height: 56px;
+      top: 0;
+      width: 100%;
+    }
+    &:hover, &:focus {
+      border-color: transparent;
+      background-color: #e1e1e1;
+    }
+    &.active {
+      &,
+      &:hover,
+      &:focus {
+        color: #1f1f1f !important;
+        background-color: #f7f7f7 !important;
+        border: 0;
+      }
+    }
+  }
+  &__link {
+    font-family: "Proxima Nova SmBd", sans-serif;
+    font-size: 24px;
+    color: #dad8cb;
+    text-transform: capitalize;
+    text-align: center;
+    margin-right: 0;
+    border: 0 !important;
+    border-radius: 0;
+    padding: 22px 15px !important;
+    &:hover {
+      color: rgba(11, 15, 29, 0.5) !important;
+      background: transparent !important;
+    }
+    @include respond-to($sm-bt) {
+      padding: 18px 15px !important;
+      font-size: 20px;
+    }
+    @include respond-to($xs-bt) {
+      padding: 10px 15px !important;
+      font-size: 18px;
+      margin-top: 0;
+    }
+  }
+  .active > &__link {
+    &,
+    &:hover,
+    &:focus {
+      color: #0b0f1d !important;
+      background-color: transparent !important;
+      border: 0 !important;
+    }
+  }
+}
+
+.rate-icon {
+  margin-right: 20px;
+}
+
+.rate-table {
+  width: 100%;
+  font-family: "Proxima Nova Con Th", sans-serif;
+  font-size: 19px;
+  color: #3d3d3d;
+  background-color: #f9f9f9;
+  display: table;
+  table-layout: fixed;
+  //margin: 10px 0;
+  @include respond-to($sm-bt) {
+    font-size: 17px;
+  }
+  @include respond-to($xs-bt) {
+    font-size: 14px;
+  }
+  &__row {
+    display: table-row;
+
+  }
+
+  &__cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    @include responsive-val(height, 55px);
+    border-bottom: 1px dotted #e1e1e1;
+    &:first-child {
+      padding-left: 30px;
+      @include respond-to($xs-bt){
+        padding-left: 10px;
+      }
+    }
+
+    &:last-child {
+      width: 100%;
+      white-space: normal;
+      text-align: right;
+    }
+
+    > * {
+      display: inline-block;
+    }
+  }
+
+}
+
+.head-rate {
+  padding-right: 60px;
+  font-family: "Oswald Rg", sans-serif;
+  background-color: #eeeeee;
+  color: #080808;
+  font-size: 18px;
+}
+
+.head-vehicle {
+  font-family: "Oswald Rg", sans-serif;
+  background-color: #eeeeee;
+  color: #080808;
+  font-size: 18px;
+}
+
+@media ("min-width: 768px") {
+
+  .active.active-tab-left {
+    &:after, &:before {
+      content: none;
+    }
+  ;
+  }
+
+  .active-tab-left {
+
+    &:after {
+      content: "";
+      height: 7px;
+      width: 100%;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    &:before {
+      content: "";
+      width: 7px;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .active.active-tab-right {
+    &:after, &:before {
+      content: none;
+    }
+  ;
+  }
+
+  .active-tab-right {
+    &:after {
+      content: "";
+      height: 7px;
+      width: 100%;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    &:before {
+      content: "";
+      width: 7px;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

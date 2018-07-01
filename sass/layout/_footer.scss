@@ -1,0 +1,222 @@
+$view-size: 145px;
+$view-size-sm: 125px;
+$view-size-xs: 100px;
+.footer {
+  position: relative;
+  height: calc(100vh - 65px);
+  padding-top: 1px;
+  @include respond-to($sm-bt){
+    height: auto;
+  }
+}
+
+.view-list {
+  overflow: hidden;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 50px 0;
+  background-size: cover;
+  //background-color: rgba(43, 49, 70, 0.85);
+  //border-bottom: 1px solid rgba(190, 195, 206, 0.2);
+
+  @include respond-to($desktop) {
+    padding: 25px 0;
+  }
+  @include respond-to($xs-bt) {
+    margin-bottom: 0;
+  }
+  @include respond-to($phone) {
+    padding: 15px 0;
+  }
+
+  &__desc {
+    color: #efefef;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    @include respond-to($desktop) {
+      //margin-top: 30px;
+    }
+    @include respond-to($phone) {
+      font-size: 12px;
+      //margin-top: 20px;
+    }
+  }
+  &__icon {
+    display: table;
+    position: relative;
+    margin: 0 auto;
+
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    @include respond-to($xs-bt) {
+      width: 70%;
+    }
+  }
+  &__container {
+    position: relative;
+    background-color: rgba(43, 49, 70, 0.85);
+    display: block;
+    width: $view-size;
+    height: $view-size;
+    margin: 20px auto;
+    transform: rotate(45deg);
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.2, 1.2) rotate(45deg);
+    }
+    @include respond-to($sm-bt) {
+      width: $view-size-sm;
+      height: $view-size-sm;
+    }
+    @include respond-to($xs-bt) {
+      margin-top: 20px;
+      margin-bottom: 70px;
+      width: $view-size-xs;
+      height: $view-size-xs;
+    }
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $view-size;
+    height: $view-size;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s;
+
+    @include respond-to($sm-bt) {
+      width: $view-size-sm;
+      height: $view-size-sm;
+    }
+    @include respond-to($xs-bt) {
+      width: $view-size-xs;
+      height: $view-size-xs;
+    }
+  }
+}
+
+.contacts {
+  background-color: rgba(43, 49, 70, 0.9);
+  color: #bec3ce;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include respond-to($tablet) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @include respond-to($phone) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__title {
+    font-family: "Proxima Nova Con SmBd", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    &:hover {
+      opacity: 0.7;
+    }
+    //text-transform: uppercase;
+  }
+  &__line {
+    border-top: 1px solid #bec3ce;
+    width: 90%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    opacity: 0.2;
+    @include respond-to("(min-width: 1025px)") {
+      width: 80%;
+    }
+    @include respond-to("(min-width: 1366px)") {
+      width: 60%;
+    }
+  }
+  address {
+    clear: both;
+    color: #656973;
+    font-family: "Proxima Nova Con Lt", sans-serif;
+    font-size: 19px;
+    @include respond-to($tablet) {
+      font-size: 19px*0.9;
+    }
+    @include respond-to($phone) {
+      font-size: 19px*0.8;
+    }
+    line-height: 26px;
+    a {
+      color: #656973;
+      text-decoration: none;
+    }
+    strong {
+      color: #bec3ce;
+      letter-spacing: 0.1em;
+    }
+    span {
+      img {
+        padding-bottom: 4px;
+        padding-right: 5px;
+      }
+    }
+  }
+  a.btn-yellow {
+    margin: 15px 0;
+    width: 145px;
+  }
+}
+
+.social-icons {
+  clear: both;
+  display: flex;
+
+  .icons {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #6b6f7e;
+    color: #6b6f7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    i {
+      font-size: 22px;
+      color: #6b6f7e;
+      text-decoration: none;
+      &:hover {
+        color: #6b6f7e;
+      }
+    }
+    &:hover {
+      border-color: $yellow;
+      i {
+        color: $yellow;
+      }
+
+    }
+  }
+}
+
+.copyright {
+  font-family: "Proxima Nova Con Lt", sans-serif;
+  font-size: 14px;
+  //color: #585b6a;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+  a {
+    color: #fff;
+  }
+
+}

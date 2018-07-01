@@ -1,0 +1,104 @@
+/* override standard bootstrap style */
+/* custom classes for accordion*/
+.faq-wrap {
+  padding: 60px;
+  margin-bottom: 0;
+  @include respond-to($xs-bt){
+    padding: 30px 10px;
+  }
+}
+
+.faq-block {
+  border-radius: 0 !important;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  box-shadow: none;
+  &__heading {
+    background-color: transparent !important;
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include respond-to($xs-bt){
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-family: "Proxima Nova Con Bd", sans-serif;
+    font-size: 17px;
+    color: #4d5985;
+    padding-right: 70px;
+    @include respond-to($xs-bt){
+      font-size: 14px;
+      padding-right: 40px;
+    }
+    &.open{
+      &:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid #7c7c7c;
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        bottom: 3px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid #fff;
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      right: 10px;
+      bottom: 3px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #7c7c7c;
+      transition: transform 0.2s;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #fff;
+      transition: transform 0.2s;
+    }
+  }
+
+  &__body {
+    border-top: 0 !important;
+    padding: 10px 70px 70px 20px;
+    font-family: "Proxima Nova Lt", sans-serif;
+    font-size: 15px;
+    color: #5d5d5d;
+    @include respond-to($xs-bt){
+      font-size: 12px;
+      padding: 0% 30px 20px 5px;
+    }
+  }
+}

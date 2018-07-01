@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+    <title>Limousine</title>
+</head>
+<body>
+<header>
+    <div w3-include-html="views/header.html"></div>
+</header>
+<section id="faq" class="">
+    <div class="content-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-short">
+                        <h2 class="header-short__text">Faq</h2>
+                        <div class="header-short__line"></div>
+                        <div class="header-short__line"></div>
+                        <a href="reservation.html" class="btn-yellow header-short__btn">Reservation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap bg-light">
+        <div class="content-wrap">
+            <div class="panel-group faq-wrap" id="accordion">
+                <div w3-repeat="x in faq" class="panel panel-default faq-block">
+                    <div class="panel-heading faq-block__heading" data-toggle="collapse" data-parent="#accordion" href="#{{id}}">
+                        <h4 class="panel-title faq-block__title">
+                            <a>{{x.q}}</a>
+                        </h4>
+                    </div>
+                    <div id="{{id}}" class="panel-collapse collapse">
+                        <div class="panel-body faq-block__body">{{x.a}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div w3-include-html="views/footer.html"></div>
+</footer>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">wedding</h4>
+                <div class="modal-subtitle">services</div>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="img">
+                <p>Auctor augue elementum sagittis, sed scelerisque, nunc turpis auctor tortor nunc dolor, magnis, urna
+                    nisi!
+                    Ultrices, nunc tincidunt! Turpis scelerisque? Dolor pulvinar lundium enim nisi et, tristique, hac,
+                    turpis
+                    nascetur habitasse sed porttitor proin purus mus tempor ac magnis pulvinar aliquet, et. Risus
+                    porttitor etiam?
+                    Platea cras scelerisque! Et cum. Vut, placerat dignissim hac sed integer phasellus aenean lundium
+                    nisi,
+                    auctor. Mid elementum vel dis parturient dis lectus, in aenean vut aliquet scelerisque risus urna et
+                    dapibus
+                    in est nascetur! Sed tortor nisi vel odio in a tincidunt integer mauris tempor, arcu? Tortor,
+                    aliquet et? Odio
+                    a sit, proin nascetur, elit lectus. Ac sed enim? Penatibus dolor placerat ultricies sed ac tincidunt
+                    tortor
+                    montes cursus in, pellentesque rhoncus, porttitor eros.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-yellow" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/jquery.viewportchecker.min.js"></script>
+<script src="js/libs/w3data.js"></script>
+<script src="js/content.js"></script>
+<script>
+    w3IncludeHTML();
+    w3DisplayData("faq", _content);
+</script>
+<!-- build:js -->
+<script src="js/main.js"></script>
+
+<!-- endbuild -->
+<script>
+    $(function () {
+        initActive('faq.html')
+    });
+</script>
+</body>

@@ -1,0 +1,25 @@
+{
+  "name": "limousine",
+  "description": "responsive webdesign",
+  "main": "index.html",
+  "authors": [
+    "Nadia"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NadiaDal/limousine",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "slick-carousel": "slick.js#^1.6.0",
+    "bootstrap": "^3.3.7",
+    "font-awesome-old": "font-awesome#3.2.1",
+    "font-awesome": "font-awesome#4.7.0",
+    "bootstrap-sass": "^3.3.7"
+  }
+}

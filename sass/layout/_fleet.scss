@@ -1,0 +1,156 @@
+$fleet-desc-color: #0b0f1d;
+
+.right-skew {
+  @include skew($bg: #0b0f1d, $deg: 25deg, $right: -40px, $width: 55px);
+}
+
+.left-skew {
+  @include skew($side: left, $bg: #0b0f1d, $deg: 25deg, $left: -40px, $width: 55px);
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.fleet-item {
+  overflow: hidden;
+  padding: 10px 0;
+  display: flex;
+  @include respond-to($xs-bt) {
+    flex-direction: column;
+  }
+  //flex-direction: row-reverse;
+  &__figure {
+    width: 51%;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    @include respond-to($xs-bt) {
+      width: 100%;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      z-index: 3;
+    }
+    &:hover:after {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__figure:hover > &__img {
+    transform: scale(1.05, 1.05);
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+  }
+  &__imgin {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 5;
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.7);
+    max-width: 40%;
+  }
+  &__body {
+    position: relative;
+    width: 49%;
+    min-height: 220px;
+    @extend %flex-center;
+
+    @include respond-to($xs-bt) {
+      width: 100%;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 100%;
+    background-color: $fleet-desc-color;
+    font-family: "Proxima Nova SmBd", sans-serif;
+    @include responsive-val(font-size, 18px);
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  &__desc {
+    //margin-top: 32%;
+    @extend %flex-center;
+  }
+  &__desc-p{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center   ;
+  }
+  &__icon {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  &__desc-val {
+    font-family: "Proxima Nova Con Rg", sans-serif;
+    @include responsive-val(font-size, 16px);
+    text-align: left;
+    color: $fleet-desc-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn-group{
+    position: absolute !important;
+    bottom: 20px;
+  }
+  &__btn {
+    width: 150px;
+    position: absolute !important;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-transform: capitalize;
+  }
+  &__btn--db {
+    display: inline-block;
+    width: 150px;
+    position: relative !important;
+    text-transform: capitalize;
+    margin: 5px;
+    @include respond-to($xs-bt){
+      width: 120px!important;
+    }
+  }
+
+}
+
+.fleet {
+  position: relative;
+  height: calc(100vh - 65px);
+  @include respond-to($sm-bt){
+    height: auto;
+  }
+  &__top {
+   font-family: "Proxima Nova Con SmBd", sans-serif;
+    font-size: 24px;
+    color: #060914;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__desc{
+    font-family: "Proxima Nova Th", sans-serif;
+    font-size: 14px;
+    color: #616161;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid  #060914;
+  }
+
+}

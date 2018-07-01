@@ -1,0 +1,222 @@
+#homeModal {
+  padding: 0 !important;
+  .modal-dialog {
+    margin: 20px auto;
+    background: #211e30;
+    opacity: 0.9;
+    @include respond-to($tabletPortrait) {
+      margin: 95px 95px;
+    }
+    @include respond-to($phoneLandscape) {
+      margin: 15px 45px;
+    }
+    @include respond-to($phonePortrait) {
+      margin: 10px 15px;
+    }
+  }
+  //.fade.in {
+  //  background: rgba(5, 8, 22, .85);
+  //  padding-right: 0 !important;
+  //
+  //}
+  //.fade.in {
+  //  background: rgba(5, 8, 22, 1);
+  //  padding-right: 0 !important;
+  //
+  //}
+  .modal-content {
+    background: 0 0;
+    box-shadow: none;
+    border: none
+  }
+
+  .modal-header {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ebebeb;
+    margin: 0 15px;
+
+  }
+
+  .modal-header {
+    h4 {
+      color: #e5e6ea;
+      font-size: 45px;
+      font-family: "Proxima Nova Th", sans-serif;
+      font-weight: 300;
+      margin-bottom: 0;
+      line-height: .8;
+      @include respond-to($tablet) {
+        font-size: 45px*0.8;
+      }
+      @include respond-to($phone) {
+        font-size: 45px*0.7;
+      }
+    }
+  }
+
+  .modal-header {
+    .modal-subtitle {
+      color: #d9c122;
+      font-size: 24px;
+      letter-spacing: 5px;
+      font-family: "Proxima Nova Th", sans-serif;
+      font-weight: 600;
+      @include respond-to($tablet) {
+        font-size: 24px*0.8;
+      }
+      @include respond-to($phone) {
+        font-size: 24px*0.7;
+      }
+    }
+  }
+  .modal-body {
+    padding-bottom: 0;
+    img {
+      max-width: 100%;
+      height: auto
+    }
+    p {
+      margin: 15px 0;
+      text-align: center;
+      color: #e5e6ea;
+      font-size: 16px;
+      @include respond-to($tablet) {
+        font-size: 14px;
+      }
+      @include respond-to($phone) {
+        font-size: 12px;
+      }
+    }
+  }
+  .modal-footer {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .modal-footer {
+    @include respond-to($phone) {
+      padding-top: 0;
+    }
+    .btn {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+    .btn-yellow {
+      @include respond-to($tablet) {
+        width: 100px;
+      }
+      @include respond-to($phone) {
+        width: 80px;
+      }
+    }
+  }
+
+  .close {
+    font-family: "Proxima Nova Th", sans-serif;
+    color: #fff;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 100;
+    font-size: 90px;
+    opacity: 1;
+    //display: none;
+  }
+}
+
+.agreedModal {
+  padding: 0 !important;
+}
+
+.modal-dialog {
+  margin: 90px auto;
+  width: 90%;
+  @include respond-to($xs-bt){
+    margin: 55px auto;
+  }
+}
+
+
+
+.modal-content {
+
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.modal-header {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ebebeb;
+  margin: 0 20px;
+
+}
+
+.modal-header {
+  &__top {
+    color: #000;
+    @include responsive-val(font-size, 20px);
+    font-family: "Oswald Lt", sans-serif;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+}
+
+.modal-body {
+  padding-bottom: 0;
+  @at-root #{&}__text {
+    font-family: "Oswald Lt", sans-serif;
+    margin: 1px 0;
+    text-align: center;
+    color: #000;
+    font-size: 12px;
+    @include respond-to($xs-bt) {
+      font-size: 10px;
+    }
+  }
+}
+
+.modal-footer {
+  border-top: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  @include respond-to($xs-bt) {
+    flex-direction: column;
+  }
+  &__link {
+    font-size: 14px;
+    padding: 10px 35px;
+    width: auto!important;
+    &:hover{
+      color: $yellow!important;
+    }
+    @include respond-to($xs-bt) {
+      padding: 10px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.close {
+  font-family: "Proxima Nova Th", sans-serif;
+  color: #000;
+  box-shadow: none;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: 100;
+  font-size: 30px;
+  opacity: 1;
+  @include respond-to($xs-bt) {
+    top: 15px;
+    font-size: 20px;
+  }
+}
